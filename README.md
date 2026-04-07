@@ -33,37 +33,32 @@ WAOC OneAI Agent OS connects everything into one system:
 
 Intent → AI Planning → Execution → On-chain Proof  
 
-Without execution, AI is incomplete.  
-Without proof, execution is not trustable.
-
 ---
 
 ## 🧠 Demo Flow
 
-A single prompt drives the entire system:
-
+Input:
 "Create a viral campaign and coordinate 1000 users"
 
-### Step 1 — OneAI (Planning)
-- Generates strategy  
-- Produces tweets  
-- Creates missions  
-- Builds action graph  
-- Outputs reasoning (visible)  
+### Step 1 — OneAI (Planning Layer)
+- Generates strategy, tweets, missions, and action graph  
+- Produces structured JSON output  
+- Exposes AI reasoning for transparency  
 
-### Step 2 — OneClaw (Execution)
-- Runs execution workflow  
+### Step 2 — OneClaw (Execution Layer)
+- Executes the action graph  
 - Produces execution logs  
-- Executes real actions  
+- Triggers real-world actions (e.g. posting to X)  
 
-### Step 3 — Real-World Action
+### Step 3 — Real-World Execution
 - Tweets are published to X (Twitter)  
 - Not simulated — real execution  
 
-### Step 4 — XLayer (Proof)
-- Execution recorded on-chain  
-- Transaction hash generated  
-- Verifiable proof of coordination  
+### Step 4 — XLayer (On-chain Proof)
+- Execution payload is generated  
+- Wallet signs the payload  
+- Transaction submitted to XLayer  
+- Transaction hash returned as proof  
 
 ---
 
@@ -81,24 +76,23 @@ OneAI (Planning Layer)
 ↓  
 OneClaw (Execution Layer)  
 ↓  
-Real World (Social / Actions)  
+Real World Actions  
 ↓  
-XLayer (Proof Layer)  
+XLayer (On-chain Proof Layer)  
 
 ---
 
 ## 🧩 Core Components
 
 ### OneAI
-- Strategy generation  
-- AI reasoning (visible)  
-- Structured coordination output  
+- AI planning engine  
+- Strategy + mission generation  
+- Structured output + reasoning  
 
 ### OneClaw
-- Execution engine  
-- Workflow runtime  
-- Action orchestration  
-- Execution logs  
+- Execution runtime  
+- Workflow orchestration  
+- Action execution + logs  
 
 ### XLayer
 - On-chain proof recording  
@@ -107,24 +101,66 @@ XLayer (Proof Layer)
 
 ---
 
+## 🔐 Agentic Wallet
+
+The system uses an agentic wallet as the on-chain identity.
+
+- Wallet: MetaMask / OKX Wallet  
+- Used for:
+  - Signing execution payload  
+  - Submitting transactions to XLayer  
+- Ensures all actions are tied to a verifiable identity  
+
+---
+
+## ⛓️ OnchainOS Usage
+
+We use XLayer as the execution verification layer.
+
+Specifically:
+
+- Construct execution payload after OneClaw completes tasks  
+- Payload includes:
+  - executionId  
+  - actions  
+  - timestamps  
+- Payload is signed using wallet  
+- Submitted as transaction to XLayer  
+
+This enables:
+
+- Verifiable execution  
+- Tamper-resistant logs  
+- Replayable coordination  
+
+---
+
+## ⚙️ How It Works (Technical)
+
+1. User submits prompt  
+2. OneAI generates structured plan (JSON)  
+3. OneClaw executes actions sequentially  
+4. Execution logs are collected  
+5. Proof payload is created  
+6. Wallet signs payload  
+7. Transaction sent to XLayer  
+8. Transaction hash returned  
+
+---
+
 ## 🔍 What Makes This Different
 
-### 1. Not just AI — Coordination System
-Most projects generate content.  
-This system executes coordination.
+### 1. AI → Execution → Proof (Full Loop)
+Not content generation — full coordination system.
 
-### 2. Execution is visible
-- Logs  
-- Steps  
-- Status  
-- Real actions  
+### 2. Real-world actions
+Actions are actually executed (e.g. Twitter posts).
 
-### 3. Proof is native, not added
-Blockchain is not decoration.  
-It is part of the system loop.
+### 3. On-chain verification
+Execution is recorded and verifiable via XLayer.
 
-### 4. End-to-end loop
-Intent → Execution → Proof  
+### 4. Transparent reasoning
+AI planning process is visible to users.
 
 ---
 
@@ -133,36 +169,45 @@ Intent → Execution → Proof
 ### AI Reasoning
 - Targeted outreach maximizes engagement  
 - User-generated content drives growth  
-- Live demos increase participation  
 
 ### Execution Logs
-OneAI plan generated successfully  
-OneClaw execution started  
-publish_launch_post: success  
-create_growth_mission: success  
+- publish_launch_post: success  
+- create_growth_mission: success  
 
 ### On-chain Proof
-Transaction submitted: 0x...  
-Proof recorded successfully  
+- Transaction submitted  
+- Proof recorded successfully  
 
 ---
 
-## 🎯 Vision
+## 👥 Team
 
-WAOC is building a civilization-scale coordination network.
-
-This demo shows the first step:
-
-Turning human intent into verifiable coordinated action.
+King Ma — Founder & Lead Developer  
 
 ---
 
-## 🏁 Hackathon Fit
+## 🌍 Position in XLayer Ecosystem
 
-- Uses XLayer as a core component  
-- Not just UI — real execution system  
-- Includes on-chain verification  
-- Clear demo loop for judging  
+WAOC OneAI Agent OS extends XLayer beyond DeFi use cases.
+
+It introduces:
+
+- AI-driven execution layer  
+- Coordination infrastructure  
+- Verifiable off-chain → on-chain bridge  
+
+This positions XLayer as:
+
+→ A trust layer for AI-driven coordination systems  
+
+---
+
+## 🎯 Hackathon Fit
+
+- Uses XLayer as a core execution layer  
+- Implements on-chain verification  
+- Demonstrates real-world integration  
+- Provides a complete demo loop  
 
 ---
 
@@ -174,14 +219,3 @@ This is not a dashboard.
 This is:
 
 An AI-native coordination OS powered by XLayer.
-
-But real impact requires:
-
-- Coordination
-- Execution
-- Verification
-
-WAOC OneAI Agent OS solves this by connecting:
-
-```text
-Intent → AI Planning → Execution → On-chain Proof
