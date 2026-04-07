@@ -1,46 +1,36 @@
-# OneAI × OneClaw × WAOC — Autonomous Coordination on XLayer
+# WAOC OneAI Agent OS  
+Turn intent into execution and verifiable proof on XLayer.
 
-A hackathon-ready Next.js demo that turns one sentence into:
-- AI strategy generation
-- execution task dispatch
-- community mission flow
-- on-chain proof on XLayer
+---
 
-## What is included
-- Frontend demo page
-- Three API routes: `plan`, `execute`, `record`
-- Real-service wiring with safe mock fallback
-- Tiny proof contract
-- Optional deploy script
+## 🌐 What This Is
 
-## Run locally
-```bash
-npm install
-cp .env.example .env.local
-npm run dev
-```
+WAOC OneAI Agent OS is an **AI-native coordination system** built on XLayer.
 
-Open:
-- `http://localhost:3000/`
-- `http://localhost:3000/demo`
+Instead of generating content, it transforms a single sentence into:
 
-## Important
-This project runs **out of the box in mock mode** so you can demo immediately.
+- Strategy
+- Execution
+- Real-world actions
+- On-chain verifiable proof
 
-When you are ready to connect your real services:
-1. Set `MOCK_MODE=false` in `.env.local`
-2. Fill in `ONEAI_*`, `ONECLAW_*`, and XLayer env values
-3. Deploy the contract if you want real on-chain proof
+This is not an AI demo.
 
-## Recommended judge flow
-1. Connect wallet
-2. Enter `Launch my project on XLayer`
-3. Click `Run Full Demo`
-4. Show AI plan, execution logs, and transaction proof panel
+This is **a full execution loop**.
 
-## Contract deployment
-See `contracts/ProofOfCoordination.sol` and `scripts/deploy-proof.ts`.
+---
 
-## Notes
-- The frontend is intentionally self-contained and does not depend on shadcn/ui.
-- The backend supports both mocked and real external service calls.
+## ⚡ Why It Matters
+
+Most AI tools stop at content generation.
+
+But real impact requires:
+
+- Coordination
+- Execution
+- Verification
+
+WAOC OneAI Agent OS solves this by connecting:
+
+```text
+Intent → AI Planning → Execution → On-chain Proof
